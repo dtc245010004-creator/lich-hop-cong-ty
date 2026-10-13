@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 24px;
+            background-color: #f9fafb;
+        }
+
+        h1 {
+            color: #1f2937;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            max-width: 700px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        td.text-left {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lịch họp công ty</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ngày</th>
+                <th>Giờ</th>
+                <th>Nội dung cuộc họp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ngày Thứ Hai có 2 cuộc họp: Dùng rowspan="2" ở cột Ngày -->
+            <tr>
+                <td rowspan="2">Thứ Hai (20/10)</td>
+                <td>08:30 - 10:00</td>
+                <td class="text-left">Họp giao ban đầu tuần phòng Kỹ thuật</td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:30</td>
+                <td class="text-left">Đánh giá tiến độ dự án Alpha</td>
+            </tr>
+
+            <!-- Ngày Thứ Ba: Cuộc họp kéo dài cả ngày/nhiều khung giờ dùng colspan="2" cho Giờ & Nội dung -->
+            <tr>
+                <td>Thứ Ba (21/10)</td>
+                <td colspan="2" class="text-left">08:00 - 17:00: Đại hội cổ đông thường niên (Cả ngày)</td>
+            </tr>
+
+            <!-- Ngày Thứ Tư: 2 cuộc họp tiếp theo -->
+            <tr>
+                <td rowspan="2">Thứ Tư (22/10)</td>
+                <td>09:00 - 10:30</td>
+                <td class="text-left">Phỏng vấn ứng viên vị trí Frontend Developer</td>
+            </tr>
+            <tr>
+                <td>15:00 - 16:30</td>
+                <td class="text-left">Họp trao đổi định hướng phòng Marketing</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
